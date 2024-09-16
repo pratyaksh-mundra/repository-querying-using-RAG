@@ -30,7 +30,7 @@ Note: For now you need to .git clone the repos to your pc to use them.
 
 ## Architecture
 
-![Architecture Diagram](architecture.png)
+![Architecture Diagram](rag_images/arch.drawio.png)
 
 ### 1. **Vector Store Creation**:
    - When a path to a GitHub repository is provided, the project breaks down the content of the files into smaller chunks.
