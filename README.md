@@ -52,19 +52,21 @@ Note: For now you need to .git clone the repos to your pc to use them.
 ### Prerequisites
 
 - Python 3.7+
-- Required Python packages listed in `requirements.txt` (`langchain`, `FAISS`, `streamlit`, etc.) 
+- Required Python packages listed in `requirements.txt` (`langchain`, `FAISS`, `streamlit`, etc.)
+- have an AWS account with Bedrock model access
+- boto3 setup sucessfully
 - AWS credentials configured for accessing Amazon Bedrock
 
 ### Installation
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/your-repo-name.git
+    git clone https://github.com/repository-querying-using-RAG.git
     ```
 
 2. Navigate to the project directory:
     ```bash
-    cd your-repo-name
+    cd repository-querying-using-RAG
     ```
 
 3. Install the required packages:
