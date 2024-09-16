@@ -12,11 +12,13 @@ Note: For now you need to .git clone the repos to your pc to use them.
 1. **Download and Process GitHub Repositories**: 
    - The project takes the path to a GitHub repository as input.
    - It breaks down the content into chunks, converts them to embeddings using Amazon Titan, and stores them in a FAISS vector store for fast similarity search.
+   - Choose which action to take: summarize a file or query the database using RAG
+![File Summaries](rag_images/Choices.png)
 
 2. **Summarize Files**:
    - Lists all sub-files in the repository.
    - Allows the user to select any file to generate a summary. The file data is sent to Mistral AI (via Amazon Bedrock) to provide an AI-generated summary.
-![File Summaries](architecture.png)
+![File Summaries](rag_images/FileSummary.png)
 
 
 3. **Query the Repository with a Chatbot**:
@@ -24,7 +26,7 @@ Note: For now you need to .git clone the repos to your pc to use them.
    - It performs a similarity search on the vector store and sends relevant results along with the user's query to Mistral AI.
    - The chatbot has memory, meaning it remembers previous conversations and provides responses with context-aware answers.
    - not only that it actually improves the results for the RAG by using the knowledge base of MinstralAI
-![Chat Bot](architecture.png)
+![Chat Bot](rag_images/ChatBot.png)
 
 ## Architecture
 
