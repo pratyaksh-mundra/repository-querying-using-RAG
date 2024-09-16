@@ -52,7 +52,7 @@ Note: For now you need to .git clone the repos to your pc to use them.
 ### Prerequisites
 
 - Python 3.7+
-- Required Python packages listed in `requirements.txt` (`langchain`, `FAISS`, `streamlit`, etc.)
+- Required Python packages listed in `requirements.txt` (`langchain`, `FAISS`, `streamlit`, etc.) 
 - AWS credentials configured for accessing Amazon Bedrock
 
 ### Installation
