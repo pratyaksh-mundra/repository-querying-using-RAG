@@ -4,7 +4,8 @@
 
 ## Overview
 
-This project allows you to interact with a GitHub code repository using a Retrieval-Augmented Generation (RAG) system. It provides two key functionalities: summarizing specific files and querying the repository content using a chatbot with memory. The system leverages Amazon Titan embeddings, FAISS vector search, and Mistral AI through Amazon Bedrock for its operations.
+This project allows you to interact with a GitHub code repository using a Retrieval-Augmented Generation (RAG) system. It provides two key functionalities: summarizing specific files and querying the repository content using a chatbot with memory. The system leverages Amazon Titan embeddings, FAISS vector search, and Mistral AI through Amazon Bedrock for its operations. 
+Note: For now you need to .git clone the repos to your pc to use them.
 
 ## Features
 
@@ -15,13 +16,19 @@ This project allows you to interact with a GitHub code repository using a Retrie
 2. **Summarize Files**:
    - Lists all sub-files in the repository.
    - Allows the user to select any file to generate a summary. The file data is sent to Mistral AI (via Amazon Bedrock) to provide an AI-generated summary.
+![File Summaries](architecture.png)
+
 
 3. **Query the Repository with a Chatbot**:
    - A chatbot interface lets users query the entire repository.
    - It performs a similarity search on the vector store and sends relevant results along with the user's query to Mistral AI.
    - The chatbot has memory, meaning it remembers previous conversations and provides responses with context-aware answers.
+   - not only that it actually improves the results for the RAG by using the knowledge base of MinstralAI
+![Chat Bot](architecture.png)
 
 ## Architecture
+
+![Architecture Diagram](architecture.png)
 
 ### 1. **Vector Store Creation**:
    - When a path to a GitHub repository is provided, the project breaks down the content of the files into smaller chunks.
@@ -69,7 +76,7 @@ This project allows you to interact with a GitHub code repository using a Retrie
 
 1. Run the following command to start the Streamlit app:
     ```bash
-    streamlit run frontend.py
+    streamlit run rag_frontend.py
     ```
 
 2. You will see the web interface where you can enter the GitHub repository path and choose actions like summarizing files or querying the repository.
